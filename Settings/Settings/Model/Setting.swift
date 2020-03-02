@@ -18,13 +18,13 @@ Creates our Setting Object- *MODEL*
 
 class Setting {
     
-    init(name: String, icon: UIImage?, isSet: Bool) {
+    init(name: String, icon: UIImage?, isOn: Bool) {
         self.name = name
         self.icon = icon
-        self.isSet = isSet
+        self.isOn = isOn
     }
     
     let name: String
     let icon: UIImage?
-    var isSet: Bool
+    var isOn: Bool
 }
