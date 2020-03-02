@@ -6,16 +6,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Setting List Table View Controller-->
         <scene sceneID="VB8-tS-w0V">
             <objects>
-                <tableViewController id="D9A-gA-e78" sceneMemberID="viewController">
+                <tableViewController id="D9A-gA-e78" customClass="SettingListTableViewController" customModule="Settings" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XEz-Nk-Fjy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="127" id="aDd-OA-FLA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="settingCell" rowHeight="127" id="aDd-OA-FLA" customClass="SettingTableViewCell" customModule="Settings" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="127"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aDd-OA-FLA" id="SXf-Ao-vHI">
@@ -40,6 +40,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0w4-u4-6SS">
                                                     <rect key="frame" x="297" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="settingSwtitchToggled:" destination="aDd-OA-FLA" eventType="valueChanged" id="2fh-Ab-i2d"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </stackView>
@@ -52,6 +55,11 @@
                                         <constraint firstAttribute="trailing" secondItem="aPL-uM-Waz" secondAttribute="trailing" constant="8" id="el2-s1-rRo"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="settingIcon" destination="qEZ-3g-J3y" id="GbN-pF-LLT"/>
+                                    <outlet property="settingNameLabel" destination="zM3-AB-FOE" id="p77-bB-cw5"/>
+                                    <outlet property="settingSwitch" destination="0w4-u4-6SS" id="bXP-m4-zQ6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

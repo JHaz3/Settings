@@ -9,11 +9,9 @@
 import Foundation
 
 class SettingsController {
-    //MARK:- Singleton
-    static let shared = SettingsController()
     
     //MARK: - Source of Truth
-    let settings: [Setting] = {
+    static let settings: [Setting] = {
         let music = Setting(name: "music", icon: #imageLiteral(resourceName: "iTunes"), isOn: false)
         let appStore = Setting(name: "App Store", icon: #imageLiteral(resourceName: "appStore"), isOn: false)
         let iBooks = Setting(name: "App Store", icon: #imageLiteral(resourceName: "iBooks"), isOn: true)
@@ -22,7 +20,7 @@ class SettingsController {
     
     //MARK: - Methods
     
-    func toggleIsOn(for setting: Setting) {
+   static func toggleIsOn(for setting: Setting) {
         setting.isOn = !setting.isOn
     }
 }

@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		15983747240D7D17008F3D0D /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15983746240D7D17008F3D0D /* Setting.swift */; };
 		15983749240D7E0D008F3D0D /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15983748240D7E0D008F3D0D /* SettingController.swift */; };
+		1598374B240D902B008F3D0D /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598374A240D902B008F3D0D /* SettingTableViewCell.swift */; };
+		1598374F240D9069008F3D0D /* SettingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598374E240D9069008F3D0D /* SettingListTableViewController.swift */; };
 		FB160A7023F756B80092DB05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB160A6F23F756B80092DB05 /* AppDelegate.swift */; };
 		FB160A7223F756B80092DB05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB160A7123F756B80092DB05 /* SceneDelegate.swift */; };
-		FB160A7423F756B80092DB05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB160A7323F756B80092DB05 /* ViewController.swift */; };
 		FB160A7723F756B80092DB05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB160A7523F756B80092DB05 /* Main.storyboard */; };
 		FB160A7923F756B90092DB05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB160A7823F756B90092DB05 /* Assets.xcassets */; };
 		FB160A7C23F756B90092DB05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB160A7A23F756B90092DB05 /* LaunchScreen.storyboard */; };
@@ -20,10 +21,11 @@
 /* Begin PBXFileReference section */
 		15983746240D7D17008F3D0D /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		15983748240D7E0D008F3D0D /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		1598374A240D902B008F3D0D /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		1598374E240D9069008F3D0D /* SettingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListTableViewController.swift; sourceTree = "<group>"; };
 		FB160A6C23F756B80092DB05 /* Settings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Settings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB160A6F23F756B80092DB05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB160A7123F756B80092DB05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB160A7323F756B80092DB05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB160A7623F756B80092DB05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB160A7823F756B90092DB05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB160A7B23F756B90092DB05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,7 +49,6 @@
 				FB160A6F23F756B80092DB05 /* AppDelegate.swift */,
 				FB160A7123F756B80092DB05 /* SceneDelegate.swift */,
 				FB160A7823F756B90092DB05 /* Assets.xcassets */,
-				FB160A7A23F756B90092DB05 /* LaunchScreen.storyboard */,
 				FB160A7D23F756B90092DB05 /* Info.plist */,
 			);
 			path = Resources;
@@ -61,20 +62,38 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		15983742240D7B2C008F3D0D /* Controller */ = {
+		15983742240D7B2C008F3D0D /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FB160A7323F756B80092DB05 /* ViewController.swift */,
 				15983748240D7E0D008F3D0D /* SettingController.swift */,
 			);
-			path = Controller;
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
-		15983743240D7B32008F3D0D /* View */ = {
+		15983743240D7B32008F3D0D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1598374E240D9069008F3D0D /* SettingListTableViewController.swift */,
+				1598374C240D903D008F3D0D /* CustomViews */,
+				1598374A240D902B008F3D0D /* SettingTableViewCell.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1598374C240D903D008F3D0D /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = View;
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		15983750240D908C008F3D0D /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				FB160A7523F756B80092DB05 /* Main.storyboard */,
+				FB160A7A23F756B90092DB05 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 		FB160A6323F756B80092DB05 = {
@@ -97,10 +116,10 @@
 		FB160A6E23F756B80092DB05 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				15983742240D7B2C008F3D0D /* Controller */,
-				15983743240D7B32008F3D0D /* View */,
+				15983750240D908C008F3D0D /* StoryBoard */,
+				15983742240D7B2C008F3D0D /* Model Controller */,
+				15983743240D7B32008F3D0D /* View Controllers */,
 				15983741240D7B27008F3D0D /* Model */,
-				FB160A7523F756B80092DB05 /* Main.storyboard */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -176,8 +195,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1598374F240D9069008F3D0D /* SettingListTableViewController.swift in Sources */,
 				15983749240D7E0D008F3D0D /* SettingController.swift in Sources */,
-				FB160A7423F756B80092DB05 /* ViewController.swift in Sources */,
+				1598374B240D902B008F3D0D /* SettingTableViewCell.swift in Sources */,
 				FB160A7023F756B80092DB05 /* AppDelegate.swift in Sources */,
 				15983747240D7D17008F3D0D /* Setting.swift in Sources */,
 				FB160A7223F756B80092DB05 /* SceneDelegate.swift in Sources */,
